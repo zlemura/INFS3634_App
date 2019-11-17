@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExcerciseModule.ExcerciseModuleQuizPassedActivity">
+
+    <TextView
+        android:id="@+id/excerciseModulePassedTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Module Quiz Passed"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/excerciseModulePassedDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Congratulations!\n\nYou pin was outside the specified range that would allow you to reach 10,000 steps if you were to walk from UNSW.\n\nYou have passed this module. Please use the button below to return to the main menu; also don't forget to check-out the special offers tab to see what offer you have unlocked!"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/excerciseModulePassedTV"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/yourPinLabelPassedTV"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:text="Your pin was only this many steps from UNSW:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/excerciseModulePassedDescription" />
+
+    <TextView
+        android:id="@+id/excerieModuleYourPinStepsPassedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toRightOf="@+id/yourPinLabelPassedTV"
+        app:layout_constraintTop_toTopOf="@+id/yourPinLabelPassedTV" />
+
+    <Button
+        android:id="@+id/returnToMainMenuExcerciseButton"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:textSize="24sp"
+        android:text="Retry Module Quiz"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

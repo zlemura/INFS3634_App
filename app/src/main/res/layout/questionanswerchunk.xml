@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#a7c0e8"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/questionTV"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="Question"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/yourAnswerLabel"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="Your Answer"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/questionTV"/>
+
+        <TextView
+            android:id="@+id/usersAnswerTV"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="2dp"
+            android:text="X"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/yourAnswerLabel"
+            app:layout_constraintLeft_toLeftOf="@+id/yourAnswerLabel"/>
+
+        <TextView
+            android:id="@+id/correctAnswerLabel"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="2dp"
+            android:text="Correct Answer"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/usersAnswerTV"
+            app:layout_constraintTop_toBottomOf="@id/usersAnswerTV"/>
+
+        <TextView
+            android:id="@+id/correctAnswerTV"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="2dp"
+            android:text="X"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/correctAnswerLabel"
+            app:layout_constraintLeft_toLeftOf="@id/correctAnswerLabel"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
