@@ -1,4 +1,4 @@
-package com.example.android.googlemapsapp.MentalHealthModuleFragments;
+package com.example.android.googlemapsapp.MentalHealthModuleSupportingFiles;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -45,7 +45,7 @@ public class MentalHealthQuestionsAndAnswersAdapter extends RecyclerView.Adapter
         viewHolder.itemPosition = i;
 
         viewHolder.mentalHealthQuestionUserAnswerText.setText(mentalHealthQuestionAndAnswerList.get(mentalHealthQuestions.get(i).getQuestionNumber()).toString());
-        viewHolder.mentalHealthQuestionCorrectAnswerText.setText(mentalHealthQuestions.get(i).getCorrectAnswer().toString());
+        //viewHolder.mentalHealthQuestionCorrectAnswerText.setText(mentalHealthQuestions.get(i).getCorrectAnswer().toString());
 
     }
 

@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.android.googlemapsapp.MentalHealthModuleSupportingFiles.MentalHealthQuestion;
+import com.example.android.googlemapsapp.MentalHealthModuleSupportingFiles.MentalHealthQuestionsAndAnswersAdapter;
 import com.example.android.googlemapsapp.R;
 
 import java.util.ArrayList;
@@ -37,7 +39,7 @@ public class MentalHealthQuizPassedActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.mentalHealthQuestionsPassedRV);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        mentalHealthQuestionsAndAnswersAdapter = new MentalHealthQuestionsAndAnswersAdapter(getApplicationContext(),questionList,questionAndAnswerList);
+        //mentalHealthQuestionsAndAnswersAdapter = new MentalHealthQuestionsAndAnswersAdapter(getApplicationContext(),questionList,questionAndAnswerList);
         recyclerView.setAdapter(mentalHealthQuestionsAndAnswersAdapter);
 
         System.out.println("AFTER ALL SETS");

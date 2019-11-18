@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.android.googlemapsapp.MentalHealthModuleFragments.MentalHealthQuizActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = new Intent(getApplicationContext(), MentalHealthQuizActivity.class);
+        startActivity(intent);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new ModuleFragment()).commit();

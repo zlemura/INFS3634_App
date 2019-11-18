@@ -23,8 +23,6 @@
         <activity android:name=".MentalHealthModuleFragments.MentalHealthQuizFailedActivity" />
         <activity android:name=".MentalHealthModuleFragments.MentalHealthQuizPassedActivity" />
         <activity android:name=".MentalHealthModuleFragments.MentalHealthQuizActivity" />
-        <activity android:name=".MentalHealthModule.MentalHealthContentActivity" />
-        <activity android:name=".MentalHealthModule.MentalHealthIntroductionActivity" />
         <activity android:name=".ExcerciseModuleFragments.ExcerciseModuleQuizPassedActivity" />
         <activity android:name=".ExcerciseModuleFragments.ExcerciseModuleQuizFailedActivity" />
         <activity android:name=".ExcerciseModule.ExcerciseModuleQuizOverviewActivity" />

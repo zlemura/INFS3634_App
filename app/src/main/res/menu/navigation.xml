@@ -3,10 +3,12 @@
 
     <item
         android:id="@+id/navigation_modules"
+        android:icon="@mipmap/icon_course"
         android:title="Modules"/>
 
     <item
         android:id="@+id/navigation_special_offers"
+        android:icon="@mipmap/icon_coupon"
         android:title="Special Offers"/>
 
 </menu>
