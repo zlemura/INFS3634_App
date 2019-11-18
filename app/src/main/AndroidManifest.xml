@@ -17,29 +17,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MentalHealthModule.MentalHealthQuizFailedActivity"></activity>
-        <activity android:name=".MentalHealthModule.MentalHealthQuizPassedActivity" />
-        <activity android:name=".MentalHealthModule.MentalHealthQuizActivity" />
+        <activity android:name=".MentalHealthModulePlaceholder"></activity>
+        <activity android:name=".NutritionModulePlaceholder" />
+        <activity android:name=".ExcerciseModulePlaceholder" />
+        <activity android:name=".MentalHealthModuleFragments.MentalHealthQuizFailedActivity" />
+        <activity android:name=".MentalHealthModuleFragments.MentalHealthQuizPassedActivity" />
+        <activity android:name=".MentalHealthModuleFragments.MentalHealthQuizActivity" />
         <activity android:name=".MentalHealthModule.MentalHealthContentActivity" />
         <activity android:name=".MentalHealthModule.MentalHealthIntroductionActivity" />
-        <activity android:name=".ExcerciseModule.ExcerciseModuleQuizPassedActivity" />
-        <activity android:name=".ExcerciseModule.ExcerciseModuleQuizFailedActivity" />
+        <activity android:name=".ExcerciseModuleFragments.ExcerciseModuleQuizPassedActivity" />
+        <activity android:name=".ExcerciseModuleFragments.ExcerciseModuleQuizFailedActivity" />
         <activity android:name=".ExcerciseModule.ExcerciseModuleQuizOverviewActivity" />
         <activity android:name=".ExcerciseModule.ExcerciseModuleQuiz" />
         <activity android:name=".ExcerciseModule.ExcerciseModuleContent2Activity" />
         <activity android:name=".ExcerciseModule.ExcerciseModuleContentActivity" />
         <activity android:name=".ExcerciseModule.ExcerciseModuleIntroductionActivity" />
-        <activity android:name=".NutritionModule.NutritionModuleQuizPassedActivity" />
-        <activity android:name=".NutritionModule.NutritionModuleQuizFailedActivity" />
+        <activity android:name=".NutritionModuleFragments.NutritionModuleQuizPassedActivity" />
+        <activity android:name=".NutritionModuleFragments.NutritionModuleQuizFailedActivity" />
         <activity android:name=".NutritionModule.NutritionModuleQuizOverviewActivity" />
         <activity android:name=".NutritionModule.NutritionContentActivity2" />
         <activity android:name=".NutritionModule.NutritionContentActivity" />
         <activity android:name=".NutritionModule.NutritionIntroductionActivity" />
         <activity android:name=".WelcomeActivity" />
-        <activity android:name=".NutritionModule.PlateBuilder" />
-        <activity android:name=".ExcersiseGuesser" />
-        <activity android:name=".DataScraping" />
-        <activity android:name=".MentalHealthModule.SimpleActivity" />
+        <activity android:name=".NutritionModuleFragments.PlateBuilder" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -53,7 +53,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".ExcerciseModule.MapsActivity"
+            android:name=".ExcerciseModuleFragments.MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".MainActivity">
             <intent-filter>
