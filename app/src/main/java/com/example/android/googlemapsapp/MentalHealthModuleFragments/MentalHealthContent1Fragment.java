@@ -1,6 +1,7 @@
 package com.example.android.googlemapsapp.MentalHealthModuleFragments;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -11,6 +12,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.widget.Button;
 
 import com.example.android.googlemapsapp.R;
 
@@ -22,6 +25,12 @@ public class MentalHealthContent1Fragment extends Fragment {
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_mental_health_content1, container, false);
+
+        WebView contentWebView = view.findViewById(R.id.mentalHealthContentPage1WV);
+
+        //contentWebView.setScrollY(840);
+        contentWebView.loadUrl("https://headspace.org.au/blog/majority-of-aussie-students-stressed-depressed/");
+        contentWebView.setBackgroundColor(Color.BLACK);
 
         return view;
     }

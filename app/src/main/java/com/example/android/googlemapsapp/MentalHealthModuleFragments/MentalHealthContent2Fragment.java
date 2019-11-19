@@ -23,6 +23,8 @@ public class MentalHealthContent2Fragment extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_mental_health_content2, container, false);
 
+
+
         return view;
     }
 }

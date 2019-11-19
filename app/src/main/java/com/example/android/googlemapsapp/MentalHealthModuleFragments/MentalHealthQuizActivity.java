@@ -16,6 +16,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.parse.Parse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,12 +44,14 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mental_health_quiz);
 
-
-
+        Parse.initialize(new Parse.Configuration.Builder(this)
+                .applicationId("BCrUQVkk80pCdeImSXoKXL5ZCtyyEZwbN7mAb11f")
+                .clientKey("rWFPEbTs7UzkaVsIXnQ4qmmr9oWqwXfiiJehtIZu")
+                .server("https://parseapi.back4app.com")
+                .build()
+        );
 
     }
-
-
     }
 
 

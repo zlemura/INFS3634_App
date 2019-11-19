@@ -25,17 +25,8 @@
         <activity android:name=".MentalHealthModuleFragments.MentalHealthQuizActivity" />
         <activity android:name=".ExcerciseModuleFragments.ExcerciseModuleQuizPassedActivity" />
         <activity android:name=".ExcerciseModuleFragments.ExcerciseModuleQuizFailedActivity" />
-        <activity android:name=".ExcerciseModule.ExcerciseModuleQuizOverviewActivity" />
-        <activity android:name=".ExcerciseModule.ExcerciseModuleQuiz" />
-        <activity android:name=".ExcerciseModule.ExcerciseModuleContent2Activity" />
-        <activity android:name=".ExcerciseModule.ExcerciseModuleContentActivity" />
-        <activity android:name=".ExcerciseModule.ExcerciseModuleIntroductionActivity" />
         <activity android:name=".NutritionModuleFragments.NutritionModuleQuizPassedActivity" />
         <activity android:name=".NutritionModuleFragments.NutritionModuleQuizFailedActivity" />
-        <activity android:name=".NutritionModule.NutritionModuleQuizOverviewActivity" />
-        <activity android:name=".NutritionModule.NutritionContentActivity2" />
-        <activity android:name=".NutritionModule.NutritionContentActivity" />
-        <activity android:name=".NutritionModule.NutritionIntroductionActivity" />
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".NutritionModuleFragments.PlateBuilder" />
         <!--
