@@ -10,13 +10,11 @@ import android.widget.Toast;
 import com.example.android.googlemapsapp.MentalHealthModuleSupportingFiles.MentalHealthQuestion;
 import com.example.android.googlemapsapp.MentalHealthModuleSupportingFiles.MentalHealthQuestionAdapter;
 import com.example.android.googlemapsapp.R;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.parse.GetCallback;
 import com.parse.Parse;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+import com.parse.ParseException;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,9 +34,6 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
     MentalHealthQuestionAdapter mentalHealthQuestionAdapter;
     View view;
 
-    private DatabaseReference mReference;
-    private FirebaseDatabase mDatabase;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,8 +46,18 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
                 .build()
         );
 
+        System.out.println("BEFORE PARSE");
+
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("question");
+
+
+
     }
-    }
+
+}
+
+
+
 
 
 
