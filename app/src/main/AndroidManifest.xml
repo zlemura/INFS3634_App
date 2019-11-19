@@ -44,8 +44,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
+            android:value="AIzaSyB6iw5s4YJZD2Dgw4uY8Ec53dfhy16sPJE" />
         <meta-data
             android:name="com.parse.SERVER_URL"
             android:value="@string/back4app_server_url" />
