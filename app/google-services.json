@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "324950117798",
+    "firebase_url": "https://mapsapp-ccd29.firebaseio.com",
+    "project_id": "mapsapp-ccd29",
+    "storage_bucket": "mapsapp-ccd29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324950117798:android:e3ca1303a057da46edd367",
+        "android_client_info": {
+          "package_name": "com.example.android.googlemapsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "324950117798-riusjfvdq6tuv1d503o7atmmjlc5g2c2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.googlemapsapp",
+            "certificate_hash": "50f90400b6b8df5ce30c4cfa3368070864b74ad2"
+          }
+        },
+        {
+          "client_id": "324950117798-gi006fv6k4se668cvecmfclcqk93n8b7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAANcuk8RDSB_dAvDqjeQMJfAZLnAt5GX0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "324950117798-gi006fv6k4se668cvecmfclcqk93n8b7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
