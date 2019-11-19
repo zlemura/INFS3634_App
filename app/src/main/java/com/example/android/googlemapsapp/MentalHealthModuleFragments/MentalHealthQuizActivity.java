@@ -39,21 +39,28 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mental_health_quiz);
 
-        Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId("BCrUQVkk80pCdeImSXoKXL5ZCtyyEZwbN7mAb11f")
-                .clientKey("rWFPEbTs7UzkaVsIXnQ4qmmr9oWqwXfiiJehtIZu")
-                .server("https://parseapi.back4app.com")
-                .build()
-        );
-
-        System.out.println("BEFORE PARSE");
-
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("question");
-
-
+        readObject();
+        System.out.println("After parse object");
 
     }
 
+    public void readObject() {
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Question");
+
+        // The query will search for a ParseObject, given its objectId.
+        // When the query finishes running, it will invoke the GetCallback
+        // with either the object, or the exception thrown
+        query.getInBackground("<PARSE_OBJECT_ID>", new GetCallback<ParseObject>() {
+            public void done(ParseObject result, ParseException e) {
+                if (e == null) {
+                    System.out.println("IN RESULT LOOP");
+                    System.out.println(result);
+                } else {
+                    // something went wrong
+                }
+            }
+        });
+    }
 }
 
 
