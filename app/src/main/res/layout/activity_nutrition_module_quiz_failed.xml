@@ -52,12 +52,35 @@
         app:layout_constraintLeft_toRightOf="@+id/calorieGoalLabelTV"
         app:layout_constraintTop_toTopOf="@+id/calorieGoalLabelTV" />
 
+    <TextView
+        android:id="@+id/yourCalorieFailedTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:text="Your Total:"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        app:layout_constraintRight_toRightOf="@+id/calorieGoalLabelTV"
+        app:layout_constraintTop_toBottomOf="@+id/calorieGoalLabelTV"/>
+
+    <TextView
+        android:id="@+id/yourCalorieFailedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toRightOf="@+id/yourCalorieFailedTV"
+        app:layout_constraintTop_toTopOf="@+id/yourCalorieFailedTV" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/plateFailedRV"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/calorieGoalLabelTV"
+        app:layout_constraintTop_toBottomOf="@id/yourCalorieFailedLabel"
+        app:layout_constraintBottom_toTopOf="@+id/retryBtn"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
     <Button
@@ -65,7 +88,7 @@
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:textSize="24sp"
-        android:text="Retry Module Quiz"
+        android:text="Return to Module"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>

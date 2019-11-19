@@ -11,8 +11,12 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.android.googlemapsapp.MainActivity;
+import com.example.android.googlemapsapp.NutritionModuleSupportingFIles.Branded;
 import com.example.android.googlemapsapp.NutritionModuleSupportingFIles.BrandedAdapter;
+import com.example.android.googlemapsapp.NutritionModuleSupportingFIles.FoodItem;
 import com.example.android.googlemapsapp.R;
+
+import java.util.ArrayList;
 
 public class NutritionModuleQuizPassedActivity extends AppCompatActivity {
 
@@ -29,15 +33,25 @@ public class NutritionModuleQuizPassedActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         int calorieGoal = intent.getIntExtra("calorieGoal",0);
+        ArrayList<Branded> plateItems = PlateBuilder.plateItems;
+        int plateCalories = 0;
+
+        for (int i=0;i<plateItems.size();i++){
+            plateCalories+= Integer.valueOf(plateItems.get(i).getNf_calories());
+        }
 
         TextView calorieGoalTV = findViewById(R.id.calorieGoalPassedLabel);
 
         calorieGoalTV.setText(String.valueOf(calorieGoal));
 
+        TextView yourCaloriesTV = findViewById(R.id.calorieYourAmountPassedLabel);
+
+        yourCaloriesTV.setText(String.valueOf(plateCalories));
+
         if(PlateBuilder.plateItems.size() >0){
             recyclerView = findViewById(R.id.platePassedRV);
             recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-            brandedAdapter = new BrandedAdapter(getApplicationContext(), PlateBuilder.plateItems);
+            brandedAdapter = new BrandedAdapter(getApplicationContext(), plateItems);
             recyclerView.setAdapter(brandedAdapter);
         }
 

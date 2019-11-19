@@ -10,12 +10,15 @@ import android.view.MenuItem;
 
 import com.example.android.googlemapsapp.MentalHealthModuleFragments.MentalHealthQuizActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.parse.Parse;
 
 public class MainActivity extends AppCompatActivity {
 
     private static boolean excerciseModuleComplete = false;
     private static boolean nutritionModuleComplete = false;
     private static boolean mentalHealthModuleComplete = false;
+
+    //Text for zero complete
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +34,16 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavView);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-    }
+            Parse.initialize(new Parse.Configuration.Builder(this)
+                    .applicationId("XUJAc2oV4izfGJCo2zlyrGaHRcgetESRCE124CpE")
+                    .clientKey("VmhChcTgTvOEhv5pNk6BvGzL57IimdLiw1jDVVO5")
+                    .server("https://zlemura.back4app.io")
+                    .build()
+            );
+        }
+
+
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -77,5 +89,6 @@ public class MainActivity extends AppCompatActivity {
     public static void setMentalHealthModuleComplete(boolean mentalHealthModuleComplete) {
         MainActivity.mentalHealthModuleComplete = mentalHealthModuleComplete;
     }
+
 }
 

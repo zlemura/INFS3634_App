@@ -4,18 +4,21 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class MentalHealthQuestion implements Serializable {
 
     private int questionNumber;
     private String questionText;
-    private String[] questionOptions;
-    private String questionCorrectAnswer;
 
-    public MentalHealthQuestion(int questionNumber, String questionText, String[] questionOptions, String questionCorrectAnswer) {
-        this.questionNumber = questionNumber;
+    private List<String> optionList;
+
+    private String correctAnswer;
+
+    public MentalHealthQuestion(int questionNumber, String questionText,List<String> optionList, String correctAnswer){
+        this.questionNumber=questionNumber;
         this.questionText = questionText;
-        this.questionOptions = questionOptions;
-        this.questionCorrectAnswer = questionCorrectAnswer;
+        this.optionList=optionList;
+        this.correctAnswer=correctAnswer;
     }
 
     public int getQuestionNumber() {
@@ -34,19 +37,19 @@ public class MentalHealthQuestion implements Serializable {
         this.questionText = questionText;
     }
 
-    public String[] getQuestionOptions() {
-        return questionOptions;
+    public List<String> getOptionList() {
+        return optionList;
     }
 
-    public void setQuestionOptions(String[] questionOptions) {
-        this.questionOptions = questionOptions;
+    public void setOptionList(List<String> optionList) {
+        this.optionList = optionList;
     }
 
-    public String getQuestionCorrectAnswer() {
-        return questionCorrectAnswer;
+    public String getCorrectAnswer() {
+        return correctAnswer;
     }
 
-    public void setQuestionCorrectAnswer(String questionCorrectAnswer) {
-        this.questionCorrectAnswer = questionCorrectAnswer;
+    public void setCorrectAnswer(String correctAnswer) {
+        this.correctAnswer = correctAnswer;
     }
 }

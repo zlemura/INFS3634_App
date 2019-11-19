@@ -1,6 +1,7 @@
 package com.example.android.googlemapsapp.MentalHealthModuleSupportingFiles;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,16 +13,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MentalHealthQuestionsAndAnswersAdapter extends RecyclerView.Adapter<MentalHealthQuestionsAndAnswersAdapter.ViewHolder> {
 
-    private ArrayList<MentalHealthQuestion> mentalHealthQuestions = new ArrayList<>();
+    private ArrayList<Question> mentalHealthQuestions = new ArrayList<>();
     private HashMap<Integer,String> mentalHealthQuestionAndAnswerList = new HashMap<>();
     private LayoutInflater layoutInflater;
     private Context context;
 
-    MentalHealthQuestionsAndAnswersAdapter(Context context, ArrayList<MentalHealthQuestion> mentalHealthQuestions,
+    public MentalHealthQuestionsAndAnswersAdapter(Context context, ArrayList<Question> mentalHealthQuestions,
                                            HashMap<Integer,String> mentalHealthQuestionAndAnswerList){
         this.layoutInflater = LayoutInflater.from(context);
         this.mentalHealthQuestions = mentalHealthQuestions;
@@ -44,8 +46,8 @@ public class MentalHealthQuestionsAndAnswersAdapter extends RecyclerView.Adapter
 
         viewHolder.itemPosition = i;
 
-        viewHolder.mentalHealthQuestionUserAnswerText.setText(mentalHealthQuestionAndAnswerList.get(mentalHealthQuestions.get(i).getQuestionNumber()).toString());
-        //viewHolder.mentalHealthQuestionCorrectAnswerText.setText(mentalHealthQuestions.get(i).getCorrectAnswer().toString());
+        viewHolder.mentalHealthQuestionUserAnswerText.setText(mentalHealthQuestionAndAnswerList.get(Integer.valueOf(mentalHealthQuestions.get(i).getQuestionNumber())).toString());
+        viewHolder.mentalHealthQuestionCorrectAnswerText.setText(mentalHealthQuestions.get(i).getQuestionCorrectAnswer().toString());
 
     }
 
@@ -59,6 +61,7 @@ public class MentalHealthQuestionsAndAnswersAdapter extends RecyclerView.Adapter
         TextView mentalHealthQuestionText;
         TextView mentalHealthQuestionUserAnswerText;
         TextView mentalHealthQuestionCorrectAnswerText;
+        ConstraintLayout constraintLayoutQ;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

@@ -18,15 +18,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MentalHealthQuestionAdapter extends RecyclerView.Adapter<MentalHealthQuestionAdapter.ViewHolder> {
 
-    private ArrayList<MentalHealthQuestion> mentalHealthQuestions = new ArrayList<>();
+    private ArrayList<Question> mentalHealthQuestions = new ArrayList<>();
     private LayoutInflater layoutInflater;
     private Context context;
-    private HashMap<MentalHealthQuestion,Boolean> listForIfItemChecked = new HashMap<>();
+    private HashMap<Question,Boolean> listForIfItemChecked = new HashMap<>();
     private HashMap<Integer,String> listForItemsWithAnswers = new HashMap<>();
 
-    public MentalHealthQuestionAdapter(Context context, ArrayList<MentalHealthQuestion> mentalHealthQuestions) {
+    public MentalHealthQuestionAdapter(Context context, ArrayList<Question> mentalHealthQuestions) {
         this.layoutInflater = LayoutInflater.from(context);
-        this.mentalHealthQuestions = mentalHealthQuestions;
+        this.mentalHealthQuestions=mentalHealthQuestions;
         this.context = context;
     }
 
@@ -43,9 +43,11 @@ public class MentalHealthQuestionAdapter extends RecyclerView.Adapter<MentalHeal
         viewHolder.itemPosition = i;
         viewHolder.mentalHealthQuestionText.setText(mentalHealthQuestions.get(i).getQuestionText());
 
-        /*viewHolder.mentalHealthQuestionOption1.setText(mentalHealthQuestions.get(i).getOptionList().get(0));
-        viewHolder.mentalHealthQuestionOption2.setText(mentalHealthQuestions.get(i).getOptionList().get(1));
-        viewHolder.mentalHealthQuestionOption3.setText(mentalHealthQuestions.get(i).getOptionList().get(2));*/
+        String[] options = mentalHealthQuestions.get(i).getQuestionOptions().split(",");
+
+        viewHolder.mentalHealthQuestionOption1.setText(options[0]);
+        viewHolder.mentalHealthQuestionOption2.setText(options[1]);
+        viewHolder.mentalHealthQuestionOption3.setText(options[2]);
 
         System.out.println("All elements added for " + i);
 
@@ -71,19 +73,25 @@ public class MentalHealthQuestionAdapter extends RecyclerView.Adapter<MentalHeal
             mentalHealthOptionsGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
+
                     listForIfItemChecked.put(mentalHealthQuestions.get(itemPosition),true);
+                    System.out.println("KeySET:" + listForIfItemChecked.keySet());
 
                     int checkedButtonId = group.getCheckedRadioButtonId();
 
                     if(mentalHealthQuestionOption1.getId() == checkedButtonId){
                         System.out.println("THESELECTEDIS" + mentalHealthQuestionOption1.getText());
-                        listForItemsWithAnswers.put(mentalHealthQuestions.get(itemPosition).getQuestionNumber(),mentalHealthQuestionOption1.getText().toString());
+                        listForItemsWithAnswers.put(Integer.valueOf(mentalHealthQuestions.get(itemPosition).getQuestionNumber()),mentalHealthQuestionOption1.getText().toString());
+
+
                     }else if(mentalHealthQuestionOption2.getId() == checkedButtonId){
                         System.out.println("THESELECTEDIS" + mentalHealthQuestionOption2.getText());
-                        listForItemsWithAnswers.put(mentalHealthQuestions.get(itemPosition).getQuestionNumber(),mentalHealthQuestionOption2.getText().toString());
+                        listForItemsWithAnswers.put(Integer.valueOf(mentalHealthQuestions.get(itemPosition).getQuestionNumber()),mentalHealthQuestionOption2.getText().toString());
+
                     }else if(mentalHealthQuestionOption3.getId() == checkedButtonId){
                         System.out.println("THESELECTEDIS" + mentalHealthQuestionOption3.getText());
-                        listForItemsWithAnswers.put(mentalHealthQuestions.get(itemPosition).getQuestionNumber(),mentalHealthQuestionOption3.getText().toString());
+                        listForItemsWithAnswers.put(Integer.valueOf(mentalHealthQuestions.get(itemPosition).getQuestionNumber()),mentalHealthQuestionOption3.getText().toString());
+
                     }
 
                 }
@@ -97,12 +105,12 @@ public class MentalHealthQuestionAdapter extends RecyclerView.Adapter<MentalHeal
         return mentalHealthQuestions.size();
     }
 
-    public HashMap<MentalHealthQuestion, Boolean> getListForIfItemChecked() {
-        return listForIfItemChecked;
+    public ArrayList<Question> getMentalHealthQuestions() {
+        return mentalHealthQuestions;
     }
 
-    public void setListForIfItemChecked(HashMap<MentalHealthQuestion, Boolean> listForIfItemChecked) {
-        this.listForIfItemChecked = listForIfItemChecked;
+    public HashMap<Question, Boolean> getListForIfItemChecked() {
+        return listForIfItemChecked;
     }
 
     public HashMap<Integer, String> getListForItemsWithAnswers() {

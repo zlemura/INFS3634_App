@@ -7,7 +7,7 @@
     tools:context=".MentalHealthModuleFragments.MentalHealthQuizActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/mentalHealthQuizQuestionsRV"
+        android:id="@+id/mentalHealthQuizRV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
