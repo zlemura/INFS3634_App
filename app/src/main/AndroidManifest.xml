@@ -22,7 +22,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MentalHealthModulePlaceholder"></activity>
+        <activity android:name=".SpecialOfferDetailActivity"></activity>
+        <activity android:name=".MentalHealthModulePlaceholder" />
         <activity android:name=".NutritionModulePlaceholder" />
         <activity android:name=".ExcerciseModulePlaceholder" />
         <activity android:name=".MentalHealthModuleFragments.MentalHealthQuizFailedActivity" />

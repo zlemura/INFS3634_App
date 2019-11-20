@@ -46,8 +46,17 @@ public class MentalHealthQuestionsAndAnswersAdapter extends RecyclerView.Adapter
 
         viewHolder.itemPosition = i;
 
+        viewHolder.mentalHealthQuestionText.setText(mentalHealthQuestions.get(i).getQuestionText().toString());
+
         viewHolder.mentalHealthQuestionUserAnswerText.setText(mentalHealthQuestionAndAnswerList.get(Integer.valueOf(mentalHealthQuestions.get(i).getQuestionNumber())).toString());
         viewHolder.mentalHealthQuestionCorrectAnswerText.setText(mentalHealthQuestions.get(i).getQuestionCorrectAnswer().toString());
+
+        if(viewHolder.mentalHealthQuestionUserAnswerText.getText().equals(viewHolder.mentalHealthQuestionCorrectAnswerText.getText())){
+            viewHolder.constraintLayoutQ.setBackgroundColor(Color.GREEN);
+        }else{
+            viewHolder.constraintLayoutQ.setBackgroundColor(Color.RED);
+        }
+
 
     }
 
@@ -66,7 +75,8 @@ public class MentalHealthQuestionsAndAnswersAdapter extends RecyclerView.Adapter
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            mentalHealthQuestionText = itemView.findViewById(R.id.mentalHealthQuestionText);
+            constraintLayoutQ = itemView.findViewById(R.id.questionAnswerCL);
+            mentalHealthQuestionText = itemView.findViewById(R.id.questionTV);
             mentalHealthQuestionUserAnswerText = itemView.findViewById(R.id.usersAnswerTV);
             mentalHealthQuestionCorrectAnswerText = itemView.findViewById(R.id.correctAnswerTV);
 

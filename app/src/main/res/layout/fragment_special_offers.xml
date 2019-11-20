@@ -10,7 +10,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/noOffersTV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="You have not unlocked any special offers. You must complete a module to unlock an offer!"
+            android:textColor="#000000"
+            android:textSize="28sp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/specialOfferRV"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"

@@ -6,6 +6,7 @@
     android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/questionAnswerCL"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="#a7c0e8"
@@ -18,8 +19,8 @@
             android:gravity="center"
             android:text="Question"
             android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textStyle="italic"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

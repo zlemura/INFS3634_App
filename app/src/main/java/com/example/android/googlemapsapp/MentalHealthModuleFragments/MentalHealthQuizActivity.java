@@ -45,9 +45,11 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mental_health_quiz);
 
+        questionList.clear();
+
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
 
-        String searchUrl = "https://api.myjson.com/bins/gmema";
+        String searchUrl = "https://api.myjson.com/bins/zp6gm";
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, searchUrl,
                 new Response.Listener<String>() {
@@ -107,8 +109,8 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
                     //If all questions are answered, this is a function to check how many the user got right
                     mentalHealthUserAnswersList = mentalHealthQuestionAdapter.getListForItemsWithAnswers();
 
-                    int questionsGraded = 0;
-                    int questionsAnsweredCorrectly = 0;
+                    double questionsGraded = 0;
+                    double questionsAnsweredCorrectly = 0;
 
 
                     for(int i=0;i<questionList.size();i++){
@@ -132,7 +134,12 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
                     }
 
                     //If the user scored over 80%, they will have passed the module, else, they will be returned to the start and forced to sit the test again
+
+                    System.out.println("USER SCORE IS: "+ questionsAnsweredCorrectly/questionsGraded);
+
                     if(questionsAnsweredCorrectly/questionsGraded >= 0.8){
+
+                        System.out.println("The user achieved :" + questionsAnsweredCorrectly/questionsGraded);
                         System.out.println("Module passed");
 
                         for(int i=0;i<questionList.size();i++){
@@ -146,6 +153,7 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
 
 
                     }else{
+                        System.out.println("The user achieved :" + questionsAnsweredCorrectly/questionsGraded);
                         System.out.println("Module failed");
                         Intent intent = new Intent(getApplicationContext(),MentalHealthQuizFailedActivity.class);
                         startActivity(intent);

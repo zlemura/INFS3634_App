@@ -28,22 +28,17 @@ public class MainActivity extends AppCompatActivity {
         /*Intent intent = new Intent(getApplicationContext(), MentalHealthQuizActivity.class);
         startActivity(intent);*/
 
+        //nutritionModuleComplete = true;
+        //mentalHealthModuleComplete = true;
+        //excerciseModuleComplete = true;
+
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new ModuleFragment()).commit();
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavView);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-            Parse.initialize(new Parse.Configuration.Builder(this)
-                    .applicationId("XUJAc2oV4izfGJCo2zlyrGaHRcgetESRCE124CpE")
-                    .clientKey("VmhChcTgTvOEhv5pNk6BvGzL57IimdLiw1jDVVO5")
-                    .server("https://zlemura.back4app.io")
-                    .build()
-            );
         }
-
-
-
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
