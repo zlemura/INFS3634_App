@@ -28,7 +28,6 @@ public class NutritionModuleContent1Fragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_nutrition_module_content1, container, false);
 
         WebView contentWebView = view.findViewById(R.id.nutritionContentPage1WV);
-        Button nextBtn = view.findViewById(R.id.nutritionContentPage1NextBtn);
 
         contentWebView.setScrollY(840);
         contentWebView.loadUrl("https://www.healthdirect.gov.au/kilojoules");

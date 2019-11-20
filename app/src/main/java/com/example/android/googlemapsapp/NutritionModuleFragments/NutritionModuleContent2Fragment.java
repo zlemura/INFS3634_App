@@ -26,7 +26,6 @@ public class NutritionModuleContent2Fragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_nutrition_module_content2, container, false);
 
         WebView contentWebView = view.findViewById(R.id.nutritionContentPage2WV);
-        Button nextBtn = view.findViewById(R.id.nutritionContentPage1NextBtn);
 
         contentWebView.loadUrl("https://www.eatforhealth.gov.au/guidelines/about-australian-dietary-guidelines");
         contentWebView.setScrollY(350);
