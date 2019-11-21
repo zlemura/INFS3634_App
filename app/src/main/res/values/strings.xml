@@ -8,6 +8,9 @@
     <string name="modules">FitSpo has a number of modules that you can complete which will unlock special offers from UNSW that can be claimed on campus!</string>
     <string name="special_offers">After you pass a module, a special offer from UNSW will be unlocked. To access special offers, click the Special Offers icon at the bottom of the home screen!</string>
 
+    <string name="exercise_content1">The article below from Health Direct Australia outlines the importance of daily physical activity - not only for physical but also for mental health.</string>
+    <string name="exercise_content2"/>
+
     <string name="module_return">Return to Module</string>
     <string name="menu_return">Return to Menu</string>
     <string name="next">Next</string>
