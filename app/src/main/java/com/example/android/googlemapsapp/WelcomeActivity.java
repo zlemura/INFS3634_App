@@ -1,30 +1,43 @@
 package com.example.android.googlemapsapp;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class WelcomeActivity extends AppCompatActivity {
+import com.github.paolorotolo.appintro.AppIntro;
+
+public class WelcomeActivity extends AppIntro {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
+        addSlide(WelcomeFragment.newInstance(R.layout.intro_screen1));
+        addSlide(WelcomeFragment.newInstance(R.layout.intro_screen2));
+        addSlide(WelcomeFragment.newInstance(R.layout.intro_screen3));
+    }
 
-        //Welcome screen for users when they start the app, explaining how the application works
+    @Override
+    public void onSkipPressed(Fragment currentFragment) {
+        super.onSkipPressed(currentFragment);
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+    }
 
-        //Button at end of tutorial that when clicked directs user to main menu/screen
-        Button letsGetStartedBtn = findViewById(R.id.letsGetStartedBtn);
+    @Override
+    public void onDonePressed(Fragment currentFragment) {
+        super.onDonePressed(currentFragment);
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+    }
 
-        letsGetStartedBtn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(intent);
-            }
-        });
+    @Override
+    public void onSlideChanged(@Nullable Fragment oldFragment, @Nullable Fragment newFragment) {
+        super.onSlideChanged(oldFragment, newFragment);
+        // Do something when the slide changes.
     }
 }
