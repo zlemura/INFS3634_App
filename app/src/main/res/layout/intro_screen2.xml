@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:orientation="vertical">
 
@@ -12,9 +13,12 @@
         android:textSize="18sp"
         android:textColor="#ff0000" />
 
-    <Button
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 2" />
+        app:lottie_fileName="hello_world.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
 
 </LinearLayout>
