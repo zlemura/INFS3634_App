@@ -41,7 +41,7 @@
         android:id="@+id/mentalHealthQuizOverviewNextBtn"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:text="TAKE QUIZ"
+        android:text="@string/start_quiz"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
