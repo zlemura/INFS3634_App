@@ -39,6 +39,9 @@ public class ModuleFragment extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_module, container, false);
 
+        //This fragment allows the user to select a module they would like to complete.
+        //Each button redirects the user to the relevant module placeholder activity, which holds the fragments for the module
+
         CardView excerciseModuleButton = view.findViewById(R.id.excerciseModuleButton);
 
         excerciseModuleButton.setOnClickListener(new View.OnClickListener(){

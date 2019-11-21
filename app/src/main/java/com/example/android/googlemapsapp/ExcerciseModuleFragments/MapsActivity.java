@@ -48,6 +48,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         Button nextBtn = findViewById(R.id.mapsQuizNextBtn);
 
+        //Button to submit results of user selection (pin)
         nextBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -55,6 +56,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 System.out.println("userPinDropped = " + userPinDropped);
                 System.out.println("Pin distance = " + pinStepDistance);
 
+                //If a pin has been dropped and within 10000 steps of UNSW pin, go to passed activity
+                //Else if pin dropped and not within 10000 steps of UNSW pin, go to failed activity
+                //Else if pin has not been dropped, show a toast informing the user they must drop a pin before cotninuing
                 if( userPinDropped == true){
                     if(pinStepDistance >=10000){
                         System.out.println("IN PASSED IF");
@@ -74,6 +78,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
     }
 
+    //Initialises the google map for a user to interact with
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -87,10 +92,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
+        //Listener for when user taps map, to place pin on that position and calcualte how many steps the pin
+        //is from the UNSW pin, for the prupose of determine if user has passed quiz
+
+
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
 
             @Override
             public void onMapClick(LatLng point) {
+
+                //Boolean to determine if a pin has already been dropped, to tell the user they can only
+                //drop one pin
+
                 if (userPinDropped == false) {
                     MarkerOptions marker = new MarkerOptions()
                             .position(new LatLng(point.latitude, point.longitude))
@@ -99,6 +112,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mMap.addMarker(marker);
                     System.out.println("The pin is at: " + point.latitude + "---" + point.longitude);
                     userPinDropped = true;
+
+                    //API call for detemrining distance from UNSW pin to users pin, using latitidue and longitudes
                     urlForDistanceRequest = "https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&" +
                             "origins=" + unsw.latitude + "," + unsw.longitude +
                             "&destinations=" + userPin.latitude + "," + userPin.longitude +
@@ -154,14 +169,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             }
         });
-
-        //String request
-
-        //Code to check if distance will burn 1000 calories
-
-        //Return to user result
-
-        //Unlock special offer
 
     }
 }

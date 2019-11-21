@@ -28,6 +28,8 @@ public class MentalHealthModuleQuizOverviewFragment extends Fragment {
 
         Button nextBtn = view.findViewById(R.id.mentalHealthQuizOverviewNextBtn);
 
+        //Takes user to MentalHealthQuizActivity.class, this is the activity for the quiz module.
+
         nextBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

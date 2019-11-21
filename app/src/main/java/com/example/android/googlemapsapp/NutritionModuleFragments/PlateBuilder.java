@@ -48,11 +48,14 @@ public class PlateBuilder extends AppCompatActivity {
 
         plateItems.clear();
 
+        //Get random calorie value between 100 and 1200
         calorieGoal= ThreadLocalRandom.current().nextInt(100, 1200);
 
+        //Set textview to random calorieGoal
         TextView calorieGoalTV = findViewById(R.id.calorieGoalLabel);
         calorieGoalTV.setText(String.valueOf(calorieGoal));
 
+        //Handles when a user inputs a term in the food item searchview
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(final String searchText) {
@@ -69,6 +72,8 @@ public class PlateBuilder extends AppCompatActivity {
                                 // response
                                 System.out.println("RESPONSEY IS:" + response.toString());
 
+                                //Get response and create a Branded (food) item
+
                                 Gson gson = new Gson();
                                 FoodItem temp = gson.fromJson(response,FoodItem.class);
 
@@ -76,10 +81,14 @@ public class PlateBuilder extends AppCompatActivity {
 
                                 TextView searchedFoodNameTV = findViewById(R.id.searchViewFoodNameTV);
 
+                                //Sets textview for found food item, so user can decide if they are satisfied
+                                //with the item found by the API and determine if they want to add it to their
+                                //plate
                                 searchedFoodNameTV.setText(tempBranded.getFood_name());
 
                                 System.out.println("CALORIES FOR THIS IS: " + tempBranded.getNf_calories());
 
+                                //Once food item object (Branded) created, do the following
                                 processAfterResponse(tempBranded);
 
                             }
@@ -131,20 +140,29 @@ public class PlateBuilder extends AppCompatActivity {
 
                 int plateTotalCalories = 0;
 
+                //Determine if any items are on plate,and then the total calories to determine if
+                //user has passed or failed
+
+                //If no items on plate, ask user to add at least one item
                 if(plateItems.size()<1){
                     Toast.makeText(getApplicationContext(),"Please add at least one food item to your plate to submit",Toast.LENGTH_SHORT).show();
                 }else{
 
+                    //Calcualte the total calories of all items on the plate
                     for(int i=0;i<plateItems.size();i++){
                         plateTotalCalories+= Integer.valueOf(plateItems.get(i).getNf_calories());
                     }
 
+                    //If calorieGoal - plateTotalCalories (plate item total calories) is between -100
+                    // and 100 calories (100 either way),the user has passed the module
                     if(calorieGoal - plateTotalCalories < 100 && calorieGoal - plateTotalCalories >-100){
                         Intent intent = new Intent(getApplicationContext(), NutritionModuleQuizPassedActivity.class);
                         intent.putExtra("calorieGoal",calorieGoal);
                         startActivity(intent);
 
-                    }else{
+                    }//If calorieGoal - plateTotalCalories (plate item total calories) is not between -100
+                    // and 100 calories (100 either way),the user has failed the module
+                    else{
                         Intent intent = new Intent(getApplicationContext(), NutritionModuleQuizFailedActivity.class);
                         intent.putExtra("calorieGoal",calorieGoal);
                         startActivity(intent);
@@ -163,6 +181,7 @@ public class PlateBuilder extends AppCompatActivity {
         TextView itemNameTV = findViewById(R.id.searchViewFoodNameTV);
         Button addToPlateBtn = findViewById(R.id.addItemToPlateBtn);
 
+        //Determines which textview to assign the name of the food too
         addToPlateBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -198,6 +217,7 @@ public class PlateBuilder extends AppCompatActivity {
                     plateItems.add(tempBranded);
 
                 }else{
+                    //If plate has six items, inform the user they cannot add anymore items
                     Toast.makeText(getApplicationContext(),"You can only add six food items to your plate!",Toast.LENGTH_SHORT).show();
                 }
 

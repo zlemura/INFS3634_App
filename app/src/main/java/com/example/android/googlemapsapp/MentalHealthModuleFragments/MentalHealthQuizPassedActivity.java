@@ -30,22 +30,26 @@ public class MentalHealthQuizPassedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mental_health_quiz_passed);
 
+        //Get list of user answers and questionList to compare
         Intent intent = getIntent();
         HashMap<Integer, String> questionAndAnswerList = (HashMap<Integer, String>) intent.getSerializableExtra("questionAnswerHashmap");
         ArrayList<Question> questionList = MentalHealthQuizActivity.questionList;
 
+        //Populate recyclerview with both question text, user and correct answers
         recyclerView = findViewById(R.id.mentalHealthQuestionsPassedRV);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         mentalHealthQuestionsAndAnswersAdapter = new MentalHealthQuestionsAndAnswersAdapter(getApplicationContext(),questionList,questionAndAnswerList);
         recyclerView.setAdapter(mentalHealthQuestionsAndAnswersAdapter);
 
-        System.out.println("AFTER ALL SETS");
-
+        //Button to take the user back to module page
         Button returnButton = findViewById(R.id.mentalHealthReturnToMainMenuBtn);
 
         returnButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+
+                //Sets the mental health module boolean (in MainActivity.class) to complete,
+                //for purpose of special offers
                 MainActivity.setMentalHealthModuleComplete(true);
 
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);

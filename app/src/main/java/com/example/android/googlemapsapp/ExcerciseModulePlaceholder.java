@@ -22,31 +22,16 @@ public class ExcerciseModulePlaceholder extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_excercise_module_placeholder);
 
+        //This is a placeholder activity for excercise module fragments - Introduction, Content 1, Content 2 and Quiz Overview.
+
+        //Initialise the bottom navigation view that can be used to swap between the various fragments
+
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_module_placeholder_excercise,
                 new ExcerciseModuleIntroductionFragment()).commit();
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavView_module_placeholder_excercise);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.module_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-        startActivity(intent);
-
-        return super.onOptionsItemSelected(item);
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
@@ -75,4 +60,26 @@ public class ExcerciseModulePlaceholder extends AppCompatActivity {
                     return true;
                 }
             };
+
+    //Adds the home button to the placeholder activity and makes it clickable - this will return the user
+    //to the MainActivity.class, so they can restart/reselect a module to complete or view their special offers
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.module_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+
+        return super.onOptionsItemSelected(item);
+    }
+
     }

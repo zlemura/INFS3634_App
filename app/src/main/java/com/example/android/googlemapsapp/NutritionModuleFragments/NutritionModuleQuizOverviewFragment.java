@@ -28,6 +28,8 @@ public class NutritionModuleQuizOverviewFragment extends Fragment {
 
         Button nextBtn = view.findViewById(R.id.nutritionQuizOverviewNextBtn);
 
+        //Takes user to PlateBuilder.class, this is the activity for the quiz module.
+
         nextBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

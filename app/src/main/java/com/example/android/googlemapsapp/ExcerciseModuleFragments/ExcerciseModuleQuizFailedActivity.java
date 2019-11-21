@@ -22,11 +22,13 @@ public class ExcerciseModuleQuizFailedActivity extends AppCompatActivity {
         Intent intent = getIntent();
         int steps = intent.getIntExtra("stepsDistance",0);
 
-        System.out.println("STEPSIS: "+ steps);
+        //Prints steps from UNSW pin to user pin in console
+        System.out.println("STEPS IS: "+ steps);
 
         Button retryBtn = findViewById(R.id.retryFailedExcerciseBtn);
         TextView stepsAmountTV = findViewById(R.id.excerieModuleYourPinStepsLabel);
 
+        //Set value of steps from UNSW based on users pin drop
         stepsAmountTV.setText(String.valueOf(steps));
 
         retryBtn.setOnClickListener(new View.OnClickListener(){

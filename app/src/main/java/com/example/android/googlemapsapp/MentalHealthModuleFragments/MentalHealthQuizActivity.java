@@ -47,6 +47,9 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
 
         questionList.clear();
 
+        //CORRECT ANSWERS: C,C,A,B,B :) - DEBUGGING PURPOSES
+
+        //API call to hosted JSON file to get question list and aprse it into an array
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
 
         String searchUrl = "https://api.myjson.com/bins/zp6gm";
@@ -60,11 +63,13 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
                         String apiText = response.toString();
                         QuestionSet questionSet = gson.fromJson(response,QuestionSet.class);
 
+                        //Loop to convert the questionSet array to an array list
                         for(int i=0;i<questionSet.getQuestions().length;i++){
                             questionList.add(questionSet.getQuestions()[i]);
                             System.out.println("CORERCT ANSWER FOR " + i + "is " + questionSet.getQuestions()[i].getQuestionNumber());
                         }
 
+                        //After question list has been convereted to an array, do the following method:
                         processAfterReturn();
 
                     }
@@ -82,15 +87,20 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
 
         Button submitButton = findViewById(R.id.mentalHealthQuizSubmitButton);
 
+        //Submit button to calculate if the user has passed or failed
         submitButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
 
+                //This is a HashMpa that stores the question number and if it has been answered (from the mentalHealthQuestionAdapter)
                 HashMap<Question,Boolean> tempList = mentalHealthQuestionAdapter.getListForIfItemChecked();
                 boolean allQuestionsAnswered = true;
 
                 RecyclerView.ViewHolder holder = recyclerView.findViewHolderForAdapterPosition(0);
 
+                //Loops through all elements in the recyclerview, determines if the question has been answered before submitting -
+                //IF ANSWERED: print in the console the answer
+                //IF NOT ANSWERED: breaks the loop and shows the user a toast asking them to answer all question before submitting
                 for(Integer i=0;i<questionList.size();i++){
 
                     if(tempList.get(questionList.get(i)) == null){
@@ -105,6 +115,8 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
 
                 }
 
+
+                //If all questions were found to be answered, grade the results
                 if(allQuestionsAnswered == true){
                     //If all questions are answered, this is a function to check how many the user got right
                     mentalHealthUserAnswersList = mentalHealthQuestionAdapter.getListForItemsWithAnswers();
@@ -112,17 +124,21 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
                     double questionsGraded = 0;
                     double questionsAnsweredCorrectly = 0;
 
-
+                    //Compare the answer given by the user using a hashmap (mentalHealthUserAnswersList) and array list that holds
+                    //the questions with correct answers from API call. This loop compares if the answer given by the user (in the Hashmap)
+                    //for a particular question is equal to the answer for the question (from the array list).
                     for(int i=0;i<questionList.size();i++){
 
                         if(mentalHealthUserAnswersList.get(Integer.valueOf(questionList.get(i).getQuestionNumber())).equals(questionList.get(i).getQuestionCorrectAnswer())){
                             System.out.println("Correct answer is - " + questionList.get(i).getQuestionCorrectAnswer());
                             System.out.println("The user answered " + mentalHealthUserAnswersList.get(Integer.valueOf(questionList.get(i).getQuestionNumber())));
 
+                            //If the answer provided by user and question answer are equal, increment both questions graded and questions answered correctly
                             questionsGraded++;
                             questionsAnsweredCorrectly++;
 
                         }else{
+                            //If the answer provided by user and question answer are equal, increment only questions graded
                             questionsGraded++;
                             System.out.println("Correct answer is - " + questionList.get(i).getQuestionCorrectAnswer());
                             System.out.println("The user answered " + mentalHealthUserAnswersList.get(Integer.valueOf(questionList.get(i).getQuestionNumber())));
@@ -137,6 +153,8 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
 
                     System.out.println("USER SCORE IS: "+ questionsAnsweredCorrectly/questionsGraded);
 
+                    //If user score greater than or equal to 0.8, take user to module passed screen
+
                     if(questionsAnsweredCorrectly/questionsGraded >= 0.8){
 
                         System.out.println("The user achieved :" + questionsAnsweredCorrectly/questionsGraded);
@@ -147,15 +165,20 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
                         }
 
                         Intent intent = new Intent(getApplicationContext(),MentalHealthQuizPassedActivity.class);
+
+                        //Pass the list of users answers to the pass activity to populate recyclerview
                         intent.putExtra("questionAnswerHashmap",mentalHealthUserAnswersList);
                         //intent.putExtra("questionList",questionList);
                         startActivity(intent);
 
 
-                    }else{
+                    }//If user score less than 0.8, take user to module passed failed
+                    else{
                         System.out.println("The user achieved :" + questionsAnsweredCorrectly/questionsGraded);
                         System.out.println("Module failed");
                         Intent intent = new Intent(getApplicationContext(),MentalHealthQuizFailedActivity.class);
+                        //Dont pass the list of users answers to failure activity so they cant just see what they
+                        //answered incorrectly and re-try the quiz straight-away
                         startActivity(intent);
                     }
 
@@ -167,6 +190,8 @@ public class MentalHealthQuizActivity extends AppCompatActivity {
     }
 
     public void processAfterReturn(){
+
+        //Populate the recyclerview after the arraylist for questions has been populated
 
         recyclerView = findViewById(R.id.mentalHealthQuizRV);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));

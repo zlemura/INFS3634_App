@@ -23,8 +23,6 @@ public class NutritionModuleIntroductionFragment extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_nutrition_module_introduction, container, false);
 
-        System.out.println("MODULE INFLATED");
-
         return view;
     }
 

@@ -18,6 +18,9 @@ public class SpecialOfferDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_special_offer_detail);
 
+        //This activity shows more detail about a special offer once it is selected from the 'Special Offers' fragment
+
+        //ArrayList to hold a list of all unlocked special offers
         ArrayList<SpecialOffers> unlockedSpecialOfferList = SpecialOffersFragment.getUnlockedSpecialOfferList();
 
         Intent intent = getIntent();
@@ -25,6 +28,7 @@ public class SpecialOfferDetailActivity extends AppCompatActivity {
 
         System.out.println("THE MODULE TEXT IS:" + module);
 
+        //For loop using the string value passed through intent to determine which special offer to show
         for(int i=0;i<unlockedSpecialOfferList.size();i++){
             if(unlockedSpecialOfferList.get(i).getSpecialOfferModule().equals(module)){
                 offerForActivity = unlockedSpecialOfferList.get(i);
@@ -38,6 +42,7 @@ public class SpecialOfferDetailActivity extends AppCompatActivity {
         ImageView specialOfferImageView = findViewById(R.id.specialOfferIV);
         ImageView specialOfferQRCode = findViewById(R.id.specialOfferQRCode);
 
+        //Sets the values of text and imageviews for the special offer
         specialOfferPlaceTV.setText(offerForActivity.getSpecialOfferPlace());
         specialOfferDescriptionTV.setText(offerForActivity.getSpecialOfferText());
 

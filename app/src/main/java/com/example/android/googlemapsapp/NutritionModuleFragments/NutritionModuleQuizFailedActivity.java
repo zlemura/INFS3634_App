@@ -33,6 +33,7 @@ public class NutritionModuleQuizFailedActivity extends AppCompatActivity {
         Button retryButton = findViewById(R.id.retryBtn);
 
         Intent intent = getIntent();
+        //Get both calorieGoal amount and plateitem arraylist from PlateBuilder.class
         int calorieGoal = intent.getIntExtra("calorieGoal",0);
         ArrayList<Branded> plateItems = PlateBuilder.plateItems;
         int plateCalories = 0;
@@ -43,11 +44,15 @@ public class NutritionModuleQuizFailedActivity extends AppCompatActivity {
 
         TextView calorieGoalTV = findViewById(R.id.calorieGoalLabel);
 
+        //Set the calorie goal textview to the calorie goal
         calorieGoalTV.setText(String.valueOf(calorieGoal));
 
         TextView yourCaloriesTV = findViewById(R.id.yourCalorieFailedLabel);
 
+        //Set the users calorie total to their plates total
         yourCaloriesTV.setText(String.valueOf(plateCalories));
+
+        //Load all plate items into recyclerview, showing food name and calories per item
 
         if(PlateBuilder.plateItems.size() >0){
             recyclerView = findViewById(R.id.plateFailedRV);

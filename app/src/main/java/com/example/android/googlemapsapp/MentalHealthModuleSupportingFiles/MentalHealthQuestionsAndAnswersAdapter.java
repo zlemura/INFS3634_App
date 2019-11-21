@@ -42,15 +42,18 @@ public class MentalHealthQuestionsAndAnswersAdapter extends RecyclerView.Adapter
     @Override
     public void onBindViewHolder(@NonNull MentalHealthQuestionsAndAnswersAdapter.ViewHolder viewHolder, int i) {
 
-        System.out.println("IM IN THE ON BIND NOW");
-
         viewHolder.itemPosition = i;
 
+        //Set question text textview value (for chunk)
         viewHolder.mentalHealthQuestionText.setText(mentalHealthQuestions.get(i).getQuestionText().toString());
 
+        //Set users answer textview value (for chunk)
         viewHolder.mentalHealthQuestionUserAnswerText.setText(mentalHealthQuestionAndAnswerList.get(Integer.valueOf(mentalHealthQuestions.get(i).getQuestionNumber())).toString());
+        //Set correct answer textview value (for chunk)
         viewHolder.mentalHealthQuestionCorrectAnswerText.setText(mentalHealthQuestions.get(i).getQuestionCorrectAnswer().toString());
 
+        //If the users answer and correct answer text match, set constraintlayout (chunk) colour to green,
+        //otherwise set the colour to red
         if(viewHolder.mentalHealthQuestionUserAnswerText.getText().equals(viewHolder.mentalHealthQuestionCorrectAnswerText.getText())){
             viewHolder.constraintLayoutQ.setBackgroundColor(Color.GREEN);
         }else{

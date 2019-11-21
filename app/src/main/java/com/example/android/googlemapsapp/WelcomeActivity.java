@@ -14,6 +14,9 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
+        //Welcome screen for users when they start the app, explaining how the application works
+
+        //Button at end of tutorial that when clicked directs user to main menu/screen
         Button letsGetStartedBtn = findViewById(R.id.letsGetStartedBtn);
 
         letsGetStartedBtn.setOnClickListener(new View.OnClickListener(){

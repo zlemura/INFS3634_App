@@ -19,6 +19,10 @@ public class MentalHealthQuizFailedActivity extends AppCompatActivity {
 
         Button returnButton = findViewById(R.id.retryMHBtn);
 
+        //We don't show the user what questions they answered correctly and incorrectly
+        //so they must go back to the articles and re-read them, rather than simply
+        //giving them the answers :)
+
         returnButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

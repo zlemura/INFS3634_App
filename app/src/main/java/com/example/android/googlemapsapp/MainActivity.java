@@ -15,24 +15,20 @@ import com.parse.Parse;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Variables that are used to determine if modules are complete, for the purpose of showing special
+    //offers in the special offers fragment
     private static boolean excerciseModuleComplete = false;
     private static boolean nutritionModuleComplete = false;
     private static boolean mentalHealthModuleComplete = false;
-
-    //Text for zero complete
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
-        startActivity(intent);*/
+        //This is a placeholder activity for two fragments - 'Modules' and 'Special Offers'
 
-        //nutritionModuleComplete = true;
-        //mentalHealthModuleComplete = true;
-        //excerciseModuleComplete = true;
-
+        //Initialise the bottom navigation view that can be used to swap between 'Modules' and 'Special Offers' screens
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new ModuleFragment()).commit();
 
@@ -62,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             };
 
+
+    //Getters and setters used in modules to get/set the status of modules complete, used for once a user passes a module quiz
     public static boolean isExcerciseModuleComplete() {
         return excerciseModuleComplete;
     }
@@ -87,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //Adds 'i' button to top action bar and makes it clickable
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.mainmenu, menu);

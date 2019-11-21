@@ -43,6 +43,7 @@ public class MentalHealthQuestionAdapter extends RecyclerView.Adapter<MentalHeal
         viewHolder.itemPosition = i;
         viewHolder.mentalHealthQuestionText.setText(mentalHealthQuestions.get(i).getQuestionText());
 
+        //Split the possible options and assign them to radio buttons
         String[] options = mentalHealthQuestions.get(i).getQuestionOptions().split(",");
 
         viewHolder.mentalHealthQuestionOption1.setText(options[0]);
@@ -74,21 +75,27 @@ public class MentalHealthQuestionAdapter extends RecyclerView.Adapter<MentalHeal
                 @Override
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
 
+                    //Add question to listForItemChecked hashmap, indicating the question has been answered
                     listForIfItemChecked.put(mentalHealthQuestions.get(itemPosition),true);
                     System.out.println("KeySET:" + listForIfItemChecked.keySet());
 
                     int checkedButtonId = group.getCheckedRadioButtonId();
 
                     if(mentalHealthQuestionOption1.getId() == checkedButtonId){
+                        //If first button pressed, add question number and answer value to listForItemsWithAnswers hashmap.
+                        //This will be used in MentalHealthQuizActivity.class to determine if user has passed or failed
                         System.out.println("THESELECTEDIS" + mentalHealthQuestionOption1.getText());
                         listForItemsWithAnswers.put(Integer.valueOf(mentalHealthQuestions.get(itemPosition).getQuestionNumber()),mentalHealthQuestionOption1.getText().toString());
 
-
                     }else if(mentalHealthQuestionOption2.getId() == checkedButtonId){
+                        //If second button pressed, add question number and answer value to listForItemsWithAnswers hashmap.
+                        //This will be used in MentalHealthQuizActivity.class to determine if user has passed or failed
                         System.out.println("THESELECTEDIS" + mentalHealthQuestionOption2.getText());
                         listForItemsWithAnswers.put(Integer.valueOf(mentalHealthQuestions.get(itemPosition).getQuestionNumber()),mentalHealthQuestionOption2.getText().toString());
 
                     }else if(mentalHealthQuestionOption3.getId() == checkedButtonId){
+                        //If third button pressed, add question number and answer value to listForItemsWithAnswers hashmap.
+                        //This will be used in MentalHealthQuizActivity.class to determine if user has passed or failed
                         System.out.println("THESELECTEDIS" + mentalHealthQuestionOption3.getText());
                         listForItemsWithAnswers.put(Integer.valueOf(mentalHealthQuestions.get(itemPosition).getQuestionNumber()),mentalHealthQuestionOption3.getText().toString());
 

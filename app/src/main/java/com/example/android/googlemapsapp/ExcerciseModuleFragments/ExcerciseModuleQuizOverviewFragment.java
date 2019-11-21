@@ -25,6 +25,8 @@ public class ExcerciseModuleQuizOverviewFragment extends Fragment {
 
         Button nextBtn = view.findViewById(R.id.excerciseQuizOverviewNextBtn);
 
+        //Takes user to MapsActivity.class, this is the activity for the quiz module.
+
         nextBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

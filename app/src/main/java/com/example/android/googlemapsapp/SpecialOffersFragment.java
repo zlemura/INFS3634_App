@@ -27,6 +27,7 @@ public class SpecialOffersFragment extends Fragment {
     SpecialOffersAdapter specialOffersAdapter;
     View view;
 
+    //Temporary special offer arraylist to store all unlocked special offers
     private static ArrayList<SpecialOffers> unlockedSpecialOfferList = new ArrayList<>();
 
 
@@ -37,8 +38,14 @@ public class SpecialOffersFragment extends Fragment {
 
         TextView noOffersTV = view.findViewById(R.id.noOffersTV);
 
+        //Method to determine what offers have been unlocked using the variables from the MainActivity.class
+        //and adding new special offer objects to the 'unlockedSpecialOfferList' array list
         checkUnlockedSpecialOffers();
 
+        //If no special offers have been unlocked by the user a textview informing them they have not
+        //unlocked any offers is show. This if-statemetn will hide this if the 'unlockedSpecialOfferList' size
+        //is greater than 0, meaning at least one offer has been unlocked. This also populates the special
+        //offer recyclerview with elements from the 'unlockedSpecialOfferList' array-list.
         if(unlockedSpecialOfferList.size() >0){
 
             noOffersTV.setVisibility(View.INVISIBLE);
@@ -59,12 +66,20 @@ public class SpecialOffersFragment extends Fragment {
     public void onResume() {
         super.onResume();
 
+        //Notifies the recyclerview adapter that data may have changed (in the 'unlockedSpecialOfferList' array list
+        //and that the adapter should check for changes; to be added to the recyclerview.
+
         if(unlockedSpecialOfferList.size() >0){
-        specialOffersAdapter.notifyDataSetChanged();
+            unlockedSpecialOfferList.clear();
+            checkUnlockedSpecialOffers();
+            specialOffersAdapter.notifyDataSetChanged();
         }
     }
 
     public void checkUnlockedSpecialOffers(){
+
+        //Method to determine what offers have been unlocked using the variables from the MainActivity.class
+        //and adding new special offer objects to the 'unlockedSpecialOfferList' array list
 
         if(MainActivity.isExcerciseModuleComplete() == true){
             SpecialOffers excerciseOffer = new SpecialOffers("UNSW Gym",
