@@ -26,6 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="The article below is from the Australia government and discusses the importance of  health work-life balance, and how to maintain this balance.\n\nTwo sections to especially pay attention too are 'How to maintain a good work-life balance' and 'Signs and symptoms of stress'."
             android:textColor="#000000"
             android:textSize="16sp"

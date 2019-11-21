@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="You did not score at least 80% on the final module quiz.\n\nUse the button below to take you back to the beginning of the module so you can revise the content, and later re-take the quiz."
+        android:text="You did not score at least 80% on the final module quiz.\n\nUnfortunately, we do not want to tell you want questions you answered correctly in a bid to ensure you full understand and are across the content.\n\nUse the button below to take you back to the beginning of the module so you can revise the content, and later re-take the quiz."
         android:textColor="#000000"
         android:textSize="18sp"
         android:gravity="center"

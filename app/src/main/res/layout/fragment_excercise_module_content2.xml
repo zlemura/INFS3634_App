@@ -26,6 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="The goal of 10,000 steps is the recommended daily step target for healthy adults. This goal encourages the accumulation of incidental activity throughout the whole day.\n\n Read the article below carefully, as the final module quiz is reliant on the content below!"
             android:textColor="#000000"
             android:textSize="16sp"

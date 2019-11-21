@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,20 +11,206 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Welcome!"
         android:gravity="center"
+        android:text="Welcome to FitSpo!"
+        android:textColor="#000000"
         android:textSize="36sp"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/welcomeTextTV"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Welcome to our University Student Health App!"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
+        android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@+id/welcomeTV"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true"
+        android:layout_margin="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/welcomeTextCL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/welcomeTextOverviewTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="Welcome to our University Student Health App, FitSpo! FitSpo is an app created by three UNSW students with a passion for student wellbeing, and maintaining a healthy student lifestyle."
+            android:textColor="#000000"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/welcomeTextHowItWorksTitleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:text="How the app works"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeTextOverviewTV"/>
+
+            <TextView
+                android:id="@+id/howItWorksTV1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="FitSpo has a number of modules that you can complete which will unlock  special offers from UNSW that can be claimed on campus, each relating to the module you complete!\n\nTo begin a module, simply click it's button on the 'Modules' screen!"
+                app:layout_constraintTop_toBottomOf="@id/welcomeTextHowItWorksTitleTV"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <ImageView
+                android:id="@+id/tutorial1Image"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/tutorial_1"
+                app:layout_constraintTop_toBottomOf="@id/howItWorksTV1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/howItWorksTV2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="You will begin on the module's introduction page, which gives you a brief outline of the module as a whole. Use the buttons at the bottom of the screen to move to the next stages in the module.\n\nEach module has two content pieces to read and a final quiz."
+                app:layout_constraintTop_toBottomOf="@+id/tutorial1Image"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <ImageView
+                android:id="@+id/tutorial2Image"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/tutorial_2"
+                app:layout_constraintTop_toBottomOf="@id/howItWorksTV2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/howItWorksTV3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="Once you have read both content pieces you are ready to take the final module quiz. Click the 'Quiz' icon, this will take you to the quiz overview screen for the module, explaining how the quiz works and the required outcomes for the quiz.\n\n After you have read the instructions for the quiz, click the 'Take Quiz' button to start the quiz."
+                app:layout_constraintTop_toBottomOf="@+id/tutorial2Image"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <ImageView
+                android:id="@+id/tutorial3Image"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/tutorial_3"
+                app:layout_constraintTop_toBottomOf="@id/howItWorksTV3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/howItWorksTV4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="If you do not pass the quiz, you will be shown a 'Module Quiz Failed' screen. You are able to re-try the module by using the 'Return to Module' button at the bottom of the screen."
+                app:layout_constraintTop_toBottomOf="@+id/tutorial3Image"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <ImageView
+                android:id="@+id/tutorial4Image"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/tutorial_4"
+                app:layout_constraintTop_toBottomOf="@id/howItWorksTV4"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/howItWorksTV5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="If you do  pass the quiz, you will be shown a 'Module Quiz Passed' screen. In this case you can click the 'Return to Module Menu' button to return to the main module menu."
+                app:layout_constraintTop_toBottomOf="@+id/tutorial4Image"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <ImageView
+                android:id="@+id/tutorial5Image"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/tutorial_5"
+                app:layout_constraintTop_toBottomOf="@id/howItWorksTV5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/howItWorksTV6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="After you pass a module a special offer from UNSW will be unlocked. To view the special offer, click the 'Special Offers' icon at the bottom of the screen, this will take you to a list of all your offers!\n\nTo view more details about an offer, simply click the offer and a new screen will appear with more details!"
+                app:layout_constraintTop_toBottomOf="@+id/tutorial5Image"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <ImageView
+                android:id="@+id/tutorial6Image"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/tutorial_6"
+                app:layout_constraintTop_toBottomOf="@id/howItWorksTV6"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/howItWorksTV7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="If you get stuck at any time or forget any of these instructions, you can use the 'i' button at the top of the main modules screen to return to these instructions!"
+                app:layout_constraintTop_toBottomOf="@+id/tutorial6Image"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <Button
+                android:id="@+id/letsGetStartedBtn"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:text="Let's get started!"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/howItWorksTV7"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

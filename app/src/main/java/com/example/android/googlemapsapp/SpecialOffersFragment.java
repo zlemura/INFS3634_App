@@ -50,11 +50,7 @@ public class SpecialOffersFragment extends Fragment {
 
         }else{
 
-
-
         }
-
-        //specialOfferRV
 
         return view;
     }
@@ -62,7 +58,10 @@ public class SpecialOffersFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+
+        if(unlockedSpecialOfferList.size() >0){
         specialOffersAdapter.notifyDataSetChanged();
+        }
     }
 
     public void checkUnlockedSpecialOffers(){

@@ -26,6 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="Below is an article from an Australian non-profit promoting young peoples mental health, Headspace.\n\nThis article discusses the statistics of mental health amongst students. It is important to take notes of the survey results section, as it will be assessed in the final quiz."
             android:textColor="#000000"
             android:textSize="16sp"

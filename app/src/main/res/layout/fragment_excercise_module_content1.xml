@@ -26,6 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="The article below from Health Direct Australia outlines the importance of daily physical activity - not only for physical but also for mental health.\n\nAn important takeaway from this module is that the Australia government reccomends adults partake in 30 minutes of moderate to intense physical activity, most days of the week."
             android:textColor="#000000"
             android:textSize="16sp"

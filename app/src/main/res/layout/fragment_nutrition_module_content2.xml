@@ -26,6 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="Another important consideration for a university student is what a healthy diet looks like, especially on a budget.\n\nBelow is an extract from an Australian Government website outlining healthy food choices.This will be important for your final module test!"
             android:textColor="#000000"
             android:textSize="16sp"

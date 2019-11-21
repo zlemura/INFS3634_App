@@ -33,7 +33,7 @@
         <activity android:name=".ExcerciseModuleFragments.ExcerciseModuleQuizFailedActivity" />
         <activity android:name=".NutritionModuleFragments.NutritionModuleQuizPassedActivity" />
         <activity android:name=".NutritionModuleFragments.NutritionModuleQuizFailedActivity" />
-        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".NutritionModuleFragments.PlateBuilder" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -50,7 +50,7 @@
         <activity
             android:name=".ExcerciseModuleFragments.MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
