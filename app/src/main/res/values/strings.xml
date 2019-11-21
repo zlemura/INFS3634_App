@@ -8,8 +8,11 @@
     <string name="modules">FitSpo has a number of modules that you can complete which will unlock special offers from UNSW that can be claimed on campus!</string>
     <string name="special_offers">After you pass a module, a special offer from UNSW will be unlocked. To access special offers, click the Special Offers icon at the bottom of the home screen!</string>
 
+    <string name="exercise_intro">Exercise is an important aspect of a balanced lifestyle. It can be difficult for university students to maintain a healthy level of activity while trying to balance other things such as study, work and social activities.
+        \n\nThe following few pages outline some important aspects of exercise and maintaining a healthy lifestyle - and at its conclusion if you pass the module quiz you will unlock a special offer from UNSW!\n\nAn important takeaway from this module is that the Australia government recommends adults partake in 30 minutes of moderate to intense physical activity, most days of the week.</string>
     <string name="exercise_content1">The article below from Health Direct Australia outlines the importance of daily physical activity - not only for physical but also for mental health.</string>
     <string name="exercise_content2">The goal of 10,000 steps is the recommended daily step target for healthy adults. This goal encourages the accumulation of incidental activity throughout the whole day.\n\n*Read the article below carefully, as the final module quiz is reliant on the content below!</string>
+    <string name="exercise_quiz_overview">The quiz for this module requires you to select a point on a map that, if you were to walk to from UNSW, would allow you to reach the reccomended daily amount of 10,000 steps.\n\nThe purpose of this quiz is to ensure you understand how far 10,000 steps truly is, and how much walking/physical activity you should be doing, daily.</string>
 
     <string name="module_return">Return to Module</string>
     <string name="menu_return">Return to Menu</string>
