@@ -6,13 +6,6 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sample Layout 1"
-        android:textSize="18sp"
-        android:textColor="#ffffff" />
-
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
         android:layout_width="wrap_content"
@@ -20,5 +13,14 @@
         app:lottie_fileName="hello_world.json"
         app:lottie_loop="true"
         app:lottie_autoPlay="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="#ffffff" />
+
 
 </LinearLayout>
