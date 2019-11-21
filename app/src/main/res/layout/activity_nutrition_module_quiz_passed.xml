@@ -92,4 +92,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.AppCompat.Button"
+        android:id="@+id/returnBtm"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="@string/menu_return"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="6dp"
+        app:cornerRadius="8dp"
+        app:rippleColor="#33AAAAAA"
+        app:backgroundTint="@color/colorPrimary"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
