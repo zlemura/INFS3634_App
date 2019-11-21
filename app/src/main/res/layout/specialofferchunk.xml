@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/specialOfferCL"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#a7c0e8"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/youHaveASpecialOfferTV"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="You have a special offer from"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/specialOfferPlaceTV"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="SPECIAL OFFER PLACE"
+            android:textSize="24sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toBottomOf="@id/youHaveASpecialOfferTV"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <ImageView
+            android:id="@+id/specialOfferImageView"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
