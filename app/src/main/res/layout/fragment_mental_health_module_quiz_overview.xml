@@ -1,40 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_colour"
     tools:context=".MentalHealthModuleFragments.MentalHealthModuleQuizOverviewFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/mentalHealthModuleQuizTitleTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mental Health Quiz Overview"
-        android:textStyle="bold"
-        android:textSize="36sp"
-        android:textColor="#000000"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp">
 
-    <TextView
-        android:id="@+id/mentalHealthModuleQuizDescriptionTV"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:text="The mental health module quiz requires you to answer five questions relating to the articles you just read.\n\nYou must score above 80% in the quiz to pass the module. If you don't pass you will be returned to the module introduction page so you can re-read the articles and try again"
-        android:textSize="18sp"
-        android:textColor="#000000"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/mentalHealthModuleQuizTitleTV"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/mentalHealthModuleQuizTitleTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mental Health Quiz Overview"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/mentalHealthModuleQuizDescriptionTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:text="@string/mental_health_quiz_overview"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/mentalHealthModuleQuizTitleTV"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
     <com.google.android.material.button.MaterialButton
         style="@style/Widget.AppCompat.Button"
@@ -55,4 +74,4 @@
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>
+</ScrollView>

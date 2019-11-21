@@ -1,41 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_colour"
     tools:context=".MentalHealthModuleFragments.MentalHealthIntroductionFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/mentalHealthModuleIntroTitle"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            app:cardCornerRadius="10dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:text="Mental Health Module Introduction"
-            android:textSize="24sp"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:textColor="#000000"
-            android:textStyle="bold"/>
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Good mental health is essential for university students to achieve their academic potential. Mental health difficulties can impair students' attention, cognition, problem-solving, social interactions and the capacity to work constructively with others or to engage effectively with learning activities.\n\nThis module is designed to inform you of some key components of sustaining positive mental well-being amongst university students to ensure happiness and peak performance.\n\nAs with other modules, if you complete the end of module quiz successfully you will unlock a special, mental-health related offer from UNSW!"
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/mentalHealthModuleIntroTitle"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/mentalHealthModuleIntroTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:text="Mental Health Module Introduction"
+                    android:textSize="24sp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mental_health_intro"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="8dp"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/mentalHealthModuleIntroTitle"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>
+</ScrollView>
