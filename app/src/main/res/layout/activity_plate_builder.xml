@@ -51,14 +51,21 @@
             app:layout_constraintTop_toBottomOf="@+id/foodSearchView"
             app:layout_constraintLeft_toRightOf="@+id/searchViewFoodNameLabel"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/addItemToPlateBtn"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:text="Add to Plate"
-            android:textColor="#000000"
+            android:textColor="@color/colorPrimary"
             android:textSize="12sp"
+            android:layout_marginHorizontal="6dp"
+            app:cornerRadius="8dp"
+            app:rippleColor="#33AAAAAA"
+            app:backgroundTint="@android:color/transparent"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="@id/searchViewCL"
             app:layout_constraintLeft_toRightOf="@+id/searchViewFoodNameTV"
             app:layout_constraintTop_toBottomOf="@+id/foodSearchView" />
@@ -180,17 +187,21 @@
         app:layout_constraintLeft_toRightOf="@+id/calorieGoalLabelTV"
         app:layout_constraintTop_toTopOf="@+id/calorieGoalLabelTV" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.AppCompat.Button"
         android:id="@+id/submitPlateBtn"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
-        android:text="Submit Plate"
-        android:textColor="#000000"
-        android:textSize="24sp"
+        android:text="@string/submit"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="6dp"
+        app:cornerRadius="8dp"
+        app:rippleColor="#33AAAAAA"
+        app:backgroundTint="@color/colorPrimary"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

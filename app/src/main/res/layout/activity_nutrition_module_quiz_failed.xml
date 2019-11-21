@@ -83,14 +83,21 @@
         app:layout_constraintBottom_toTopOf="@+id/retryBtn"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.AppCompat.Button"
         android:id="@+id/retryBtn"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:textSize="24sp"
-        android:text="Return to Module"
-        android:textColor="#000000"
+        android:text="@string/module_return"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="6dp"
+        app:cornerRadius="8dp"
+        app:rippleColor="#33AAAAAA"
+        app:backgroundTint="@color/colorPrimary"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
