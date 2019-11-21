@@ -4,7 +4,7 @@
     <item
         android:id="@+id/navigation_module_introduction"
         android:icon="@mipmap/icon_start"
-        android:title="Introduction"/>
+        android:title="Intro"/>
 
     <item
         android:id="@+id/navigation_module_content_page_1"

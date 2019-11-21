@@ -67,7 +67,7 @@
                 android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:textColor="#000000"
-                android:text="FitSpo has a number of modules that you can complete which will unlock  special offers from UNSW that can be claimed on campus, each relating to the module you complete!\n\nTo begin a module, simply click it's button on the 'Modules' screen!"
+                android:text="FitSpo has a number of modules that you can complete which will unlock special offers from UNSW that can be claimed on campus, each relating to the module you complete!\n\nTo begin a module, simply click it's button on the 'Modules' screen!"
                 app:layout_constraintTop_toBottomOf="@id/welcomeTextHowItWorksTitleTV"
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
