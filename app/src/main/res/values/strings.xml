@@ -25,12 +25,15 @@
     <string name="mental_health_content1">Below is an article from an Australian non-profit promoting young peoples mental health, Headspace.\n\nThis article discusses the statistics of mental health amongst students. It is important to take notes of the survey results section, as it will be assessed in the final quiz.</string>
     <string name="mental_health_content2">The article below is from the Australia government and discusses the importance of  health work-life balance, and how to maintain this balance.\n\nTwo sections to especially pay attention too are:\nHow to maintain a good work-life balance and \nSigns and symptoms of stress.</string>
     <string name="mental_health_quiz_overview">The mental health module quiz requires you to answer five questions relating to the articles you just read.\n\nYou must score above 80% in the quiz to pass the module. If you do not pass you will be returned to the module introduction page so you can re-read the articles and try again.</string>
+    <string name="mental_fail">You did not score at least 80% on the final module quiz.\n\n
+        Please re-read both articles and try again.\n\nUse the button below to take you back to the beginning of the module so you can revise the content, and later re-take the quiz.</string>
 
     <string name="nutrition_intro">A balanced diet is important because your organs and tissues need proper nutrition to work effectively. Without good nutrition, your body is more prone to disease, infection, fatigue, and poor performance.\n\nThis can be detrimental for university students such as yourself, especially around exam times.
         This module will guide you through the importance of a balanced diet, what it consists of and foods to avoid.\n\nOnce again, if you pass this module you will unlock a nutrition-related, special offer from UNSW!</string>
     <string name="nutrition_content1">Below is an extract from the Health Direct Australia website explaining Kilojoules, what they are and balancing intake. \n \nThis is crucial especially for university students trying to lead a healthy lifestyle.</string>
     <string name="nutrition_content2">Another important consideration for a university student is what a healthy diet looks like, especially on a budget.\n\nBelow is an extract from an Australian Government website outlining healthy food choices. This will be important for your final module test!</string>
     <string name="nutrition_quiz_overview">The platebuilder activity requires you to create a plate that is within a set amount of calories (+/- 100).\n\nYou must use the search bar to search for foods that you believe that would make the plate within the set range. Once complete, click &quot;Submit Plate&quot; to have your plate graded. \n\nFeel free to be creative!</string>
+
 
     <string name="module_return">Return to Module</string>
     <string name="menu_return">Return to Menu</string>
