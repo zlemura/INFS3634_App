@@ -1,4 +1,4 @@
-<img src="https://github.com/zlemura/INFS3634_App/blob/master/demo/ic_launcher_round.png" width="80">
+<img src="https://github.com/zlemura/INFS3634_App/blob/master/demo/ic_launcher_round.png" width="50">
 
 # Fitspo
 
