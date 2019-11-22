@@ -10,7 +10,6 @@
             android:id="@+id/fragment_container_module_placeholder_excercise"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toTopOf="@+id/bottomNavView_module_placeholder_excercise"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
