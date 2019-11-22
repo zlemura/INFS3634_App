@@ -1,5 +1,7 @@
 # Fitspo
 
+<img src="https://github.com/zlemura/INFS3634_App/blob/master/demo/ic_launcher_round.png" width="120">
+
 A gamified learning app to promote healthy living for UNSW students through exercise, nutrition and mental health modules.
 
 <img src="https://github.com/zlemura/INFS3634_App/blob/master/demo/Intro.jpg" width="300"> <img src="https://github.com/zlemura/INFS3634_App/blob/master/demo/Menu.jpg" width="300">
