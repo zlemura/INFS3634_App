@@ -29,7 +29,7 @@ public class NutritionModuleQuizPassedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nutrition_module_quiz_passed);
 
-        Button menuButton = findViewById(R.id.returnBtn);
+        Button menuButton = findViewById(R.id.returnBtm);
 
         Intent intent = getIntent();
         //Get both calorieGoal amount and plateitem arraylist from PlateBuilder.class
