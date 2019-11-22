@@ -135,6 +135,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     // Display the first 500 characters of the response string.
                                     String apiText = response.toString();
                                     Gson gson = new Gson();
+                                    //App will crash if user selects a point in the ocean, problem with Google Maps API
                                     DistanceBetweenTwoPoints distanceObject = gson.fromJson(apiText, DistanceBetweenTwoPoints.class);
                                     int distance = Integer.valueOf(distanceObject.getRows()[0].getElements()[0].getDistance().getValue());
                                     pinStepDistance = distance;
