@@ -4,7 +4,7 @@ A gamified learning app for UNSW students to promote healthy living through exer
 
 <img src="https://github.com/zlemura/INFS3634_App/blob/master/demo/Intro.jpg" width="300"> <img src="https://github.com/zlemura/INFS3634_App/blob/master/demo/Menu.jpg" width="300">
 
-[Video Demo](https://github.com/zlemura/INFS3634_App/blob/master/demo/Fitspo%20Demo.mp4)
+[Download Video Demo](https://github.com/zlemura/INFS3634_App/raw/master/demo/Fitspo%20Demo.mp4)
 
 ## Getting Started
 
