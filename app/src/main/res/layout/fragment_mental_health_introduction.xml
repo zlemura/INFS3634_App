@@ -38,6 +38,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/mental_health_intro"
@@ -48,6 +49,19 @@
                     android:paddingHorizontal="15dp"
                     android:gravity="center"
                     app:layout_constraintTop_toBottomOf="@+id/mentalHealthModuleIntroTitle"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/animation_view"
+                    android:layout_width="225dp"
+                    android:layout_height="225dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal"
+                    app:lottie_fileName="yoga.json"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    app:layout_constraintTop_toBottomOf="@+id/description"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"/>
 
