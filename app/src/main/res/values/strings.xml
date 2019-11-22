@@ -1,28 +1,36 @@
 <resources>
     <string name="app_name">FitSpo</string>
     <string name="title_activity_maps"></string>
-    <string name="promoter_prompt">We\'re glad you love our app! Now please rate us in the app store!</string>
-    <string name="detractor_prompt">We\'re sorry you\'re experiencing problems with our app, we promise to address the issues you experienced as quickly as possible.</string>
+    <string name="promoter_prompt">We\'re glad you love our app!
+        Now please rate us in the app store!</string>
+    <string name="detractor_prompt">We\'re sorry you\'re experiencing problems with our app,
+        we promise to address the issues you experienced as quickly as possible.</string>
     <string name="error_prompt">SM SDK Error - see logs</string>
-    <string name="welcome">Welcome to our University Student Health App: FitSpo! FitSpo is an app created by three UNSW students with a passion for student wellbeing, and maintaining a healthy student lifestyle.</string>
-    <string name="modules">FitSpo has a number of modules that you can complete which will unlock special offers from UNSW that can be claimed on campus!</string>
+    <string name="welcome_short">Welcome to our University Student Health App: FitSpo</string>
+    <string name="welcome">FitSpo is an app created by three UNSW students with a passion for student wellbeing, and maintaining a healthy student lifestyle.</string>
+    <string name="modules">FitSpo has a number of modules that you can complete to learn more about fitness, nutrition and mental wellbeing.</string>
+    <string name="modules_hint">Unlock special offers from UNSW that can be claimed on campus!</string>
     <string name="special_offers">After you pass a module, a special offer from UNSW will be unlocked. To access special offers, click the Special Offers icon at the bottom of the home screen!</string>
+    <string name="special_offers_hint">Be creative, and have fun!</string>
 
-    <string name="exercise_intro">Exercise is an important aspect of a balanced lifestyle. It can be difficult for university students to maintain a healthy level of activity while trying to balance other things such as study, work and social activities.
-        \n\nThe following few pages outline some important aspects of exercise and maintaining a healthy lifestyle - and at its conclusion if you pass the module quiz you will unlock a special offer from UNSW!\n\nAn important takeaway from this module is that the Australia government recommends adults partake in 30 minutes of moderate to intense physical activity, most days of the week.</string>
+    <string name="exercise_intro">Exercise is an important aspect of a balanced lifestyle.
+        It can be difficult for university students to maintain a healthy level of activity while trying to balance other things such as study, work and social activities.
+        \n\nThe following few pages outline some important aspects of exercise and maintaining a healthy lifestyle - and at its conclusion, if you pass the module quiz, you will unlock a special offer from UNSW!\n\n
+        An important takeaway from this module is that the Australian government recommends adults to partake in 30 minutes of moderate to intense physical activity, most days of the week.</string>
     <string name="exercise_content1">The article below from Health Direct Australia outlines the importance of daily physical activity - not only for physical but also for mental health.</string>
     <string name="exercise_content2">The goal of 10,000 steps is the recommended daily step target for healthy adults. This goal encourages the accumulation of incidental activity throughout the whole day.\n\n*Read the article below carefully, as the final module quiz is reliant on the content below!</string>
-    <string name="exercise_quiz_overview">The quiz for this module requires you to select a point on a map that, if you were to walk to from UNSW, would allow you to reach the reccomended daily amount of 10,000 steps.\n\nThe purpose of this quiz is to ensure you understand how far 10,000 steps truly is, and how much walking/physical activity you should be doing, daily.</string>
+    <string name="exercise_quiz_overview">The quiz for this module requires you to select a point on a map that, if you were to walk to from UNSW, would allow you to reach the recommended daily amount of 10,000 steps.\n\nThe purpose of this quiz is to ensure you understand how far 10,000 steps truly is, and how much walking/physical activity you should be doing, daily.</string>
 
     <string name="mental_health_intro">Good mental health is essential for university students to achieve their academic potential. Mental health difficulties can impair attention, cognition, problem-solving, social interactions and the capacity to work constructively with others or to engage effectively with learning activities.\n\nThis module is designed to inform you of some key components of sustaining positive mental well-being amongst university students to ensure happiness and peak performance.\n\nAs with other modules, if you complete the end of module quiz successfully you will unlock a special, mental-health related offer from UNSW!</string>
     <string name="mental_health_content1">Below is an article from an Australian non-profit promoting young peoples mental health, Headspace.\n\nThis article discusses the statistics of mental health amongst students. It is important to take notes of the survey results section, as it will be assessed in the final quiz.</string>
-    <string name="mental_health_content2">The article below is from the Australia government and discusses the importance of  health work-life balance, and how to maintain this balance.\n\nTwo sections to especially pay attention too are How to maintain a good work-life balance and Signs and symptoms of stress.</string>
+    <string name="mental_health_content2">The article below is from the Australia government and discusses the importance of  health work-life balance, and how to maintain this balance.\n\nTwo sections to especially pay attention too are:\nHow to maintain a good work-life balance and \nSigns and symptoms of stress.</string>
     <string name="mental_health_quiz_overview">The mental health module quiz requires you to answer five questions relating to the articles you just read.\n\nYou must score above 80% in the quiz to pass the module. If you do not pass you will be returned to the module introduction page so you can re-read the articles and try again.</string>
 
-    <string name="nutrition_intro">A balanced diet is important because your organs and tissues need proper nutrition to work effectively. Without good nutrition, your body is more prone to disease, infection, fatigue, and poor performance.\n\nThis can be detrimental for university students such as yourself, especially around exam times. This module will guide you through the importance of a balanced diet, what it consists of and foods to avoid.\n\nOnce again, if you pass this module you will unlock a nutrition-related, special offer from UNSW!</string>
+    <string name="nutrition_intro">A balanced diet is important because your organs and tissues need proper nutrition to work effectively. Without good nutrition, your body is more prone to disease, infection, fatigue, and poor performance.\n\nThis can be detrimental for university students such as yourself, especially around exam times.
+        This module will guide you through the importance of a balanced diet, what it consists of and foods to avoid.\n\nOnce again, if you pass this module you will unlock a nutrition-related, special offer from UNSW!</string>
     <string name="nutrition_content1">Below is an extract from the Health Direct Australia website explaining Kilojoules, what they are and balancing intake. \n \nThis is crucial especially for university students trying to lead a healthy lifestyle.</string>
     <string name="nutrition_content2">Another important consideration for a university student is what a healthy diet looks like, especially on a budget.\n\nBelow is an extract from an Australian Government website outlining healthy food choices. This will be important for your final module test!</string>
-    <string name="nutrition_quiz_overview">The platebuilder activity requires you to create a plate that is within a set amount of calories (100 +/-).\n\nYou must use the search bar to search for foods that you believe that would make the plate within the set range. Once complete, click Submit Plate to have your plate graded.</string>
+    <string name="nutrition_quiz_overview">The platebuilder activity requires you to create a plate that is within a set amount of calories (+/- 100).\n\nYou must use the search bar to search for foods that you believe that would make the plate within the set range. Once complete, click &quot;Submit Plate&quot; to have your plate graded. \n\nFeel free to be creative!</string>
 
     <string name="module_return">Return to Module</string>
     <string name="menu_return">Return to Menu</string>
